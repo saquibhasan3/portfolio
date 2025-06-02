@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saquib Hasan - Golang Developer Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Custom CSS for Saquib Hasan's Portfolio */
+
+body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    scroll-behavior: smooth; /* Smooth scrolling for navigation links */
+}
+
+/* Hero Section Styling */
+#hero {
+    min-height: 100vh; /* Make hero section fill the viewport height */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://source.unsplash.com/random/1920x1080/?code,programming'); /* Placeholder background image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 56px; /* Adjust for fixed navbar height */
+}
+
+#hero h1 {
+    font-size: 3.5rem;
+}
+
+#hero p {
+    font-size: 1.5rem;
+}
+
+/* Section Padding */
+section {
+    padding: 80px 0;
+}
+
+/* Headings */
+h2.display-4 {
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 50px;
+    color: #0d6efd; /* Bootstrap primary blue */
+}
+
+h2.display-4::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #0d6efd; /* Bootstrap primary blue */
+    border-radius: 2px;
+}
+
+/* Card Styling (Skills & Projects) */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+    color: #333;
+}
+
+.card-text .badge {
+    font-size: 0.85em;
+    padding: 0.5em 0.8em;
+    border-radius: 0.25rem;
+}
+
+/* Image styling for about section */
+#about img {
+    max-width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border: 5px solid #0d6efd; /* Border to match primary color */
+}
+
+/* Navbar smooth scrolling offset */
+.nav-link {
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #0d6efd !important; /* Highlight on hover */
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+
+    #hero p {
+        font-size: 1.2rem;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
+    h2.display-4 {
+        font-size: 2.5rem;
+    }
+}
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Saquib Hasan</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#hero">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero" class="d-flex align-items-center justify-content-center text-white text-center py-5 bg-primary">
+        <div class="container">
+            <h1 class="display-3 fw-bold mb-3">Saquib Hasan</h1>
+            <p class="lead mb-4">Golang Enthusiast | Backend Developer | Building Scalable & Secure Web Applications</p>
+            <a href="#projects" class="btn btn-light btn-lg px-4 me-2">View Projects</a>
+            <a href="tenancy.html" class="btn btn-light btn-lg px-4 me-2">Multi Tenancy</a>
+            <a href="#contact" class="btn btn-outline-light btn-lg px-4">Get in Touch</a>
+        </div>
+    </section>
+
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4 display-4 fw-bold">About Me</h2>
+            <div class="row align-items-center">
+                <div class="col-lg-6 text-center mb-4 mb-lg-0">
+                    <img src="saquib.jpg" class="img-fluid rounded-circle shadow-lg" alt="Saquib Hasan Profile Picture">
+                </div>
+                <div class="col-lg-6">
+                    <p class="lead">Hello! I'm Saquib Hasan, a Software Developer with over five years of experience specializing in GoLang, PHP, CodeIgniter, and Laravel. Based in Dehradun, Uttarakhand, I'm passionate about crafting scalable, secure, and user-friendly web applications that solve real-world problems.</p>
+                    <p>My journey has taken me through diverse domains including logistics, finance, and inspection, where I've honed my skills in writing clean, maintainable code, designing efficient database schemas, and integrating robust APIs. I thrive in collaborative environments and am committed to continuous learning and delivering impactful solutions.</p>
+                    <p>While I actively work on improving my verbal fluency through speech therapy, my written communication skills are a significant strength. I effectively communicate with clients and team members through detailed emails, comprehensive documentation, and clear project updates. My technical expertise and problem-solving abilities consistently drive results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 display-4 fw-bold">Skills & Technologies</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4 col-sm-6 text-center">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body">
+                            <i class="fas fa-golang fa-3x text-primary mb-3"></i>
+                            <h5 class="card-title fw-bold">GoLang</h5>
+                            <p class="card-text">Gin, Echo, Goroutines, Concurrency, Microservices</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 text-center">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body">
+                            <i class="fab fa-php fa-3x text-info mb-3"></i>
+                            <h5 class="card-title fw-bold">PHP</h5>
+                            <p class="card-text">Laravel, CodeIgniter, RESTful APIs, OOP</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 text-center">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body">
+                            <i class="fas fa-database fa-3x text-success mb-3"></i>
+                            <h5 class="card-title fw-bold">Databases</h5>
+                            <p class="card-text">MySQL, PostgreSQL, Database Design, Optimization</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 text-center">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body">
+                            <i class="fab fa-js fa-3x text-warning mb-3"></i>
+                            <h5 class="card-title fw-bold">Frontend Basics</h5>
+                            <p class="card-text">Bootstrap, JavaScript, HTML5, CSS3</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 text-center">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body">
+                            <i class="fas fa-tools fa-3x text-danger mb-3"></i>
+                            <h5 class="card-title fw-bold">Tools & Practices</h5>
+                            <p class="card-text">Docker, Git, Postman, DBeaver, Composer, Agile</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 display-4 fw-bold">Experience</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow-sm mb-4 border-0">
+                        <div class="card-body p-4">
+                            <h4 class="card-title fw-bold">Software Developer</h4>
+                            <h5 class="card-subtitle mb-2 text-muted">Road2Travel LLP</h5>
+                            <p class="card-text"><small class="text-muted">October 2023 – Current </small></p>
+                            <ul>
+                                <li>Combines Golang's concurrency, PostgreSQL's robust data management with a database-per-tenant strategy.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow-sm mb-4 border-0">
+                        <div class="card-body p-4">
+                            <h4 class="card-title fw-bold">Software Developer</h4>
+                            <h5 class="card-subtitle mb-2 text-muted">Intouch Quality Services Private Limited, New Delhi</h5>
+                            <p class="card-text"><small class="text-muted">August 2019 – March 2023</small></p>
+                            <ul>
+                                <li>Led development of over ten web applications, collaborating with cross-functional teams to deliver client-centric solutions.</li>
+                                <li>Wrote clean, maintainable code, designed efficient database schemas, and integrated RESTful APIs for mobile applications.</li>
+                                <li>Reduced project delivery times by approximately 15% through effective teamwork and process optimization.</li>
+                                <li>Improved database performance for MySQL and PostgreSQL by up to 20% faster query execution using indexing and normalization.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 display-4 fw-bold">Key Projects</h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <div class="col">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">TravelExic</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">October 2023 – Present</h6>
+                            <p class="card-text"><span class="badge bg-primary me-1">Golang</span> <span class="badge bg-secondary me-1">PostgreSQL</span> <span class="badge bg-info me-1">GRPC</span> <span class="badge bg-warning text-dark">Python</span></p>
+                            <ul>
+                                <li>This project combines Golang's concurrency, PostgreSQL's robust data management with a database-per-tenant strategy, and AI-driven features like text extraction from images and PDFs using PaddleOCR via gRPC.</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-transparent border-top-0">
+                            </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">LoadingInfo (Logistics Management Platform)</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">October 2022 – March 2023</h6>
+                            <p class="card-text"><span class="badge bg-primary me-1">Laravel</span> <span class="badge bg-secondary me-1">MySQL</span> <span class="badge bg-info me-1">Bootstrap</span> <span class="badge bg-warning text-dark">JavaScript</span></p>
+                            <ul>
+                                <li>Led backend development, designing robust database schema for product, warehouse, and transaction data.</li>
+                                <li>Implemented features: product catalog, inventory tracking, shipment processing, secure user authentication.</li>
+                                <li>Achieved 25% improvement in operational efficiency for the client.</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-transparent border-top-0">
+                            </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Bureau Veritas (Inspection & Testing System)</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">August – October 2022</h6>
+                            <p class="card-text"><span class="badge bg-primary me-1">CodeIgniter</span> <span class="badge bg-secondary me-1">PostgreSQL</span> <span class="badge bg-info me-1">Bootstrap</span> <span class="badge bg-warning text-dark">JavaScript</span></p>
+                            <ul>
+                                <li>Developed system for managing inspection and test data, designing efficient database schema.</li>
+                                <li>Built RESTful APIs for Android app integration, optimizing queries to reduce data latency by 30%.</li>
+                                <li>Implemented role-based access controls for security and compliance.</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-transparent border-top-0">
+                            </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">QuessCare (Finance E-commerce Platform)</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">August 2021 – August 2022</h6>
+                            <p class="card-text"><span class="badge bg-primary me-1">Laravel</span> <span class="badge bg-secondary me-1">PostgreSQL</span> <span class="badge bg-info me-1">Bootstrap</span> <span class="badge bg-warning text-dark">JavaScript</span></p>
+                            <ul>
+                                <li>Developed RESTful APIs for product, user, and order management.</li>
+                                <li>Designed database schema for inventory, shopping carts, and payment integration.</li>
+                                <li>Achieved 20% increase in user engagement through intuitive design.</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-transparent border-top-0">
+                            </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">CRM for Dry Cleaning Services</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Additional Project</h6>
+                            <p class="card-text"><span class="badge bg-primary me-1">CodeIgniter</span> <span class="badge bg-secondary me-1">MySQL</span></p>
+                            <ul>
+                                <li>Developed a CRM automating customer management.</li>
+                                <li>Improved operational efficiency by 30%.</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-transparent border-top-0">
+                            </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Dedanadan (Android Game Backend)</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Additional Project</h6>
+                            <p class="card-text"><span class="badge bg-primary me-1">Laravel</span> <span class="badge bg-secondary me-1">MySQL</span></p>
+                            <ul>
+                                <li>Built backend ensuring smooth user interactions and reliable data management.</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-transparent border-top-0">
+                            </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Backscatter X-ray Training App Migration</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Additional Project</h6>
+                            <p class="card-text"><span class="badge bg-primary me-1">Laravel</span> <span class="badge bg-secondary me-1">.NET (Previous)</span></p>
+                            <ul>
+                                <li>Migrated application from .NET to Laravel.</li>
+                                <li>Enhanced performance by 25% and improved accessibility.</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-transparent border-top-0">
+                            </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Integrated Email & Contact Form Solutions</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Multiple Projects</h6>
+                            <p class="card-text"><span class="badge bg-primary me-1">PHP Frameworks</span> <span class="badge bg-secondary me-1">Various Industries</span></p>
+                            <ul>
+                                <li>Integrated solutions for over ten projects in e-commerce, healthcare, education, and real estate.</li>
+                                <li>Streamlined communication and enhanced user experience.</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-transparent border-top-0">
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 display-4 fw-bold">Education & Certifications</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow-sm mb-4 border-0">
+                        <div class="card-body p-4">
+                            <h4 class="card-title fw-bold">Master of Computer Applications (MCA)</h4>
+                            <h5 class="card-subtitle mb-2 text-muted">Graphic Era University, Dehradun</h5>
+                            <p class="card-text"><small class="text-muted">Graduated 2018 | 70% Aggregate</small></p>
+                        </div>
+                    </div>
+                    <div class="card shadow-sm mb-4 border-0">
+                        <div class="card-body p-4">
+                            <h4 class="card-title fw-bold">Bachelor of Computer Applications (BCA)</h4>
+                            <h5 class="card-subtitle mb-2 text-muted">Glocal University, Saharanpur</h5>
+                            <p class="card-text"><small class="text-muted">Graduated 2016 | 75% Aggregate</small></p>
+                        </div>
+                    </div>
+                    <div class="card shadow-sm mb-4 border-0">
+                        <div class="card-body p-4">
+                            <h4 class="card-title fw-bold">Udemy GoLang Course: Building Modern Web Applications with Go</h4>
+                            <h5 class="card-subtitle mb-2 text-muted">Online Certification</h5>
+                            <p class="card-text"><small class="text-muted">Completed: [Add Completion Date if available]</small></p>
+                            <a href="https://www.ude.my/UC-797d2e8f-2367-46a5-9a52-beb979e72efb/" target="_blank" class="card-link btn btn-outline-primary btn-sm">View Certificate <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="card shadow-sm mb-4 border-0">
+                        <div class="card-body p-4">
+                            <h4 class="card-title fw-bold">Android Development Certification</h4>
+                            <h5 class="card-subtitle mb-2 text-muted">Ducat, Noida</h5>
+                            <p class="card-text"><small class="text-muted">Completed 2018</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5 bg-dark text-white">
+        <div class="container">
+            <h2 class="text-center mb-5 display-4 fw-bold">Get in Touch</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <p class="lead text-center mb-4">I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
+                    <div class="text-center mb-4">
+                        <p><i class="fas fa-map-marker-alt me-2"></i> Dehradun, Uttarakhand, India</p>
+                        <p><i class="fas fa-envelope me-2"></i> <a href="mailto:saquibhasan3@gmail.com" class="text-white">saquibhasan3@gmail.com</a></p>
+                        <p><i class="fas fa-phone me-2"></i> <a href="tel:+91XXXXXXXXXX" class="text-white">+91 9520115711</a></p>
+                    </div>
+                    <div class="d-flex justify-content-center mb-4">
+                        <a href="https://www.linkedin.com/in/saquib-hasan-527880ba/" target="_blank" class="btn btn-outline-light btn-lg me-3"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+                        <a href="https://github.com/saquibhasan3" target="_blank" class="btn btn-outline-light btn-lg"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white-50 py-4 text-center border-top border-secondary">
+        <div class="container">
+            <p>&copy; 2025 Saquib Hasan. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
